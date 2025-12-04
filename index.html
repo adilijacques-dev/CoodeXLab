@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CodeXLab — Plateforme de cours en ligne</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo">CodeXLab</h1>
+      <div class="header-actions">
+        <input id="search" class="search-input" type="search" placeholder="Rechercher un cours..." />
+        <button id="themeToggle" class="icon-btn" aria-label="Changer le thème">🌗</button>
+      </div>
+    </div>
+    <div class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h2>Apprends à coder, étape par étape</h2>
+          <p class="muted">Plateforme statique optimisée, animations légères et fonctionnalités automatiques.</p>
+        </div>
+        <div class="hero-media" id="hero-slider" aria-hidden="true">
+          <div class="slide active">Bienvenue sur CodeXLab</div>
+          <div class="slide">Cours HTML &amp; CSS</div>
+          <div class="slide">Animations &amp; JS</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    <section>
+      <h3>Nos cours</h3>
+      <div id="courses" class="grid"></div>
+      <div id="no-results" class="no-results" hidden>Aucun cours trouvé.</div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> CodeXLab — Hébergé sur GitHub Pages</small>
+      <button id="openLast" class="link-btn" title="Ouvrir le dernier cours visité" hidden>Ouvrir dernier cours</button>
+    </div>
+  </footer>
+
+  <script src="assets/js/animations.js"></script>
+  <script src="assets/js/autofunctions.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
